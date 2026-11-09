@@ -37,9 +37,9 @@
   .wrap{max-width:1140px;margin:0 auto;padding:0 32px}
   .acc{color:var(--accent)}
   .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--deep)}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--btn);color:#fff;text-decoration:none;font-weight:800;font-size:16px;letter-spacing:.06em;text-transform:uppercase;padding:21px 36px;border-radius:8px;transition:background .2s,transform .2s;box-shadow:0 14px 30px -12px rgba(130,80,60,.7)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--btn);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;padding:16px 28px;border-radius:6px;transition:background .2s,transform .2s;box-shadow:0 14px 30px -12px rgba(130,80,60,.7)}
   .btn:hover{background:var(--btn-h);transform:translateY(-2px)}
-  .btn svg{width:18px;height:18px}
+  .btn svg{width:15px;height:15px}
   .safe{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--text);margin-top:14px}
   .safe svg{width:16px;height:16px;color:var(--btn);flex:none}
   .h2{font-size:clamp(30px,3.6vw,48px);font-weight:400;line-height:1.1;letter-spacing:-.02em}
@@ -63,8 +63,8 @@
   .cta-row{display:flex;align-items:center;gap:20px}
   .cta-price{line-height:1.15}
   .cta-price s{color:var(--text);font-size:14px}
-  .cta-price b{display:block;font-size:30px;font-weight:800}
-  .cta-price span{font-size:13px;color:var(--text)}
+  .cta-price b{display:block;font-size:24px;font-weight:800}
+  .cta-price span{font-size:12px;color:var(--text);letter-spacing:.02em}
   .hero-photo{align-self:end;display:flex;justify-content:center}
   .hero-photo img{width:min(500px,100%);margin-bottom:-2px;filter:drop-shadow(0 30px 40px rgba(90,50,35,.2))}
 
@@ -107,18 +107,13 @@
   .turns .head{max-width:720px;margin:0 auto 52px;text-align:center}
   .turns .head p{color:#59463F;font-size:17px;margin-top:16px}
   .pill{display:inline-block;background:var(--btn);color:#FFFAF6;font-weight:800;font-size:14px;padding:2px 10px;border-radius:4px;letter-spacing:.04em}
-  .tlist{display:grid;gap:14px;max-width:920px;margin:0 auto}
-  .t{display:grid;grid-template-columns:80px 1fr 1fr;background:var(--card);border-radius:8px;overflow:hidden}
-  .t .n{background:var(--ink);color:#F4E7DE;display:grid;place-items:center;font-size:28px;font-weight:800}
-  .t .from,.t .to{padding:24px 26px}
-  .t small{display:block;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px}
-  .t .from small{color:#9C8A80}
-  .t .from p{color:#7A6A62;font-size:16px}
-  .t .from b{color:#5C4C45;display:block;font-size:17.5px;margin-bottom:4px}
-  .t .to{background:#FFFDFB;border-left:1px dashed #DCC5B9}
-  .t .to small{color:var(--btn)}
-  .t .to p{font-size:16px;color:#4A3D37}
-  .t .to b{display:block;font-size:17.5px;color:var(--ink);margin-bottom:4px}
+  .tlist{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;max-width:1000px;margin:0 auto}
+  .t{grid-column:span 2;background:var(--card);border-radius:8px;padding:28px 26px;position:relative}
+  .t:nth-child(4){grid-column:2 / span 2}
+  .t .n{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--btn)}
+  .t .lock{position:absolute;top:24px;right:24px;width:18px;height:18px;color:#C9A898}
+  .t p{margin-top:12px;font-size:17px;font-weight:600;line-height:1.4;color:var(--ink)}
+  .t p span{color:var(--text);font-weight:400}
   .turns .cta-wrap{margin-top:48px;text-align:center}
   .turns .safe{justify-content:center;color:#59463F}
 
@@ -150,13 +145,16 @@
   .pr .lab{color:#C8C1BA;font-size:15px}
   .pr .val{font-size:76px;font-weight:800;color:#FFF8F3;letter-spacing:-.03em;line-height:1;margin:8px 0 6px}
   .pr .val small{font-size:30px;margin-right:4px;color:var(--accent)}
-  .pr .once{color:#CFC4BC;font-size:15px;margin-bottom:26px}
+  .pr .once{color:#A8988F;font-size:13px;margin-bottom:24px}
   .pr .btn{width:100%}
   .pays{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
   .pays span{border:1px solid #4A3830;border-radius:4px;padding:9px 4px;font-size:12px;color:#CFC4BC}
-  .guar{max-width:940px;margin:18px auto 0;display:flex;gap:18px;align-items:center;background:#241915;border:1px solid #3B2B24;border-radius:10px;padding:22px 28px;color:#CDBBB1;font-size:15px}
-  .guar svg{flex:none;width:40px;height:40px;color:var(--accent)}
-  .guar b{color:#FFF8F3}
+  .guar{max-width:940px;margin:22px auto 0;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:#F6EEE9;border-radius:10px;padding:28px 36px}
+  .seal{width:104px;height:104px;border-radius:50%;background:var(--btn);color:#FFF8F3;display:grid;place-items:center;text-align:center;box-shadow:0 0 0 6px #F6EEE9,0 0 0 7px #C9A898}
+  .seal b{display:block;font-size:34px;font-weight:800;line-height:1}
+  .seal span{display:block;font-size:10.5px;font-weight:800;letter-spacing:.16em;margin-top:4px}
+  .guar h3{font-size:22px;font-weight:800;color:var(--ink);margin-bottom:6px}
+  .guar p{font-size:15.5px;color:var(--text)}
 
   /* FAQ */
   .faq{padding:96px 0}
@@ -196,7 +194,7 @@
     .outs li{font-size:15.5px}
     .cta-row{flex-direction:column;align-items:stretch;gap:14px}
     .cta-price{text-align:center}
-    .btn{width:100%;padding:19px 16px;font-size:14px;letter-spacing:.04em}
+    .btn{width:100%;padding:16px 16px;font-size:13.5px}
     .hero .safe{justify-content:center}
     .hero-photo img{width:min(340px,84%);margin-top:26px}
     .tr,.pain,.turns,.bio,.offer,.faq,.final{padding:68px 0}
@@ -206,16 +204,14 @@
     .pain .grid{grid-template-columns:1fr;gap:28px}
     .q{font-size:17px}
     .verdict{padding:26px 22px}
-    .t{grid-template-columns:56px 1fr}
-    .t .n{grid-row:span 2;font-size:22px}
-    .t .to{border-left:0;border-top:1px dashed #DCC5B9}
-    .t .from,.t .to{padding:18px 18px}
+    .tlist{grid-template-columns:1fr}
+    .t,.t:nth-child(4){grid-column:auto;padding:24px 22px}
     .bio .wrap{grid-template-columns:1fr;gap:48px}
     .bio-photo{max-width:360px;margin-right:16px}
     .pbox{grid-template-columns:1fr}
     .pl{padding:30px 22px}
     .pr{padding:34px 22px}
-    .guar{flex-direction:row;padding:20px}
+    .guar{grid-template-columns:1fr;text-align:center;justify-items:center;padding:28px 22px;gap:18px}
     summary{grid-template-columns:40px 1fr 18px;padding:16px 16px}
     summary .n{font-size:21px}
     summary .q2{font-size:16px}
@@ -223,7 +219,7 @@
     footer .row{flex-direction:column;text-align:center}
     .sticky{display:block;position:fixed;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(33,23,19,.97);transform:translateY(110%);transition:transform .25s;z-index:10}
     .sticky.show{transform:none}
-    .sticky .btn{padding:16px 18px}
+    .sticky .btn{padding:14px 18px}
     body{padding-bottom:78px}
   }
 </style>
@@ -236,18 +232,18 @@
       <img class="logo" src="img/logo.webp" alt="Cinthia França" width="300" height="194">
       <span class="tag">Curso online para terapeutas</span>
       <h1>Você já é <b>uma boa terapeuta.</b> <span class="acc">Agora construa a carreira que você merece.</span></h1>
-      <p class="sub">Em 5 aulas, Cinthia França mostra os <b>5 erros que travam a carreira de terapeutas</b> e o caminho para ser reconhecida, cobrar o que vale e crescer sem viver exausta.</p>
+      <p class="sub">Em 5 aulas, eu te mostro <b>os erros que travam a carreira de terapeutas competentes</b> e o caminho para ser reconhecida e crescer sem viver exausta.</p>
       <ul class="outs">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Seja lembrada pelo que você faz de melhor</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Cobre sem culpa e pare de compensar em quantidade</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Saiba qual é o próximo passo da sua carreira</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Seja reconhecida pelo que você faz de melhor</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Cresça sem precisar viver no limite</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Descubra o próximo passo da sua carreira</li>
       </ul>
       <div class="cta-row">
-        <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero destravar minha carreira
+        <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero assistir
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <div class="cta-price"><b>R$ 67</b><span>pagamento único · com certificado</span></div>
+        <div class="cta-price"><b>R$ 67</b><span>certificado incluso</span></div>
       </div>
-      <div class="safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>7 dias de garantia · acesso pela área de membros</div>
+      <div class="safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>7 dias de garantia</div>
     </div>
     <div class="hero-photo"><img src="img/cinthia-hero.webp" alt="Cinthia França" width="820" height="1167"></div>
   </div>
@@ -264,27 +260,27 @@
       <div class="col before">
         <h3>Hoje</h3>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Você é boa, mas quase ninguém sabe o que você faz de diferente</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Seu crescimento depende de alguém lembrar de te indicar</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Você se apresenta pelo currículo e a família compara pelo preço</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Sente culpa ao cobrar e lota a agenda até ficar exausta</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Tenta descobrir tudo sozinha, na tentativa e erro</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Você é boa, mas sente que poucas pessoas enxergam isso</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Seu crescimento depende de coisas que você não controla</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Profissionais com menos tempo ocupam os espaços que você queria</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Você trabalha cada vez mais e sente que avança pouco</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Você não sabe qual deveria ser o seu próximo passo</li>
         </ul>
       </div>
       <div class="arrow"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       <div class="col after">
         <h3>Depois do curso</h3>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Você entende como se posicionar e ser lembrada, sem virar influencer</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Você cria as condições para as oportunidades chegarem até você</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Você mostra o que seu conhecimento faz pelo paciente, e isso vira valor</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Você enxerga preço como sustentabilidade, não como egoísmo</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Você sabe qual é o próximo passo certo para o seu momento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Você entende o que está travando a sua carreira</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Você sabe como fazer seu trabalho ser reconhecido</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Você passa a criar oportunidades em vez de esperar por elas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Você constrói uma carreira que se sustenta, sem viver no limite</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Você sabe qual é o próximo movimento certo para o seu momento</li>
         </ul>
       </div>
     </div>
     <div class="cta-wrap">
-      <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero essa virada por R$ 67
+      <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero essa virada
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <div class="safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>7 dias de garantia</div>
     </div>
@@ -313,30 +309,20 @@
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">O que você vai aprender</span>
-      <h2 class="h2" style="margin-top:12px">5 erros. <b>5 viradas de chave.</b></h2>
-      <p>Em <span class="pill">5 AULAS</span> você entende o que está segurando sua carreira e o que muda quando você sai de cada erro.</p>
+      <h2 class="h2" style="margin-top:12px">5 erros que ninguém te contou. <b>E como sair de cada um.</b></h2>
+      <p>Em <span class="pill">5 AULAS</span> você vai descobrir:</p>
     </div>
     <div class="tlist">
-      <div class="t"><div class="n">01</div>
-        <div class="from"><small>O erro</small><b>Achar que ser boa basta</b><p>Ninguém reconhece uma competência que não consegue enxergar.</p></div>
-        <div class="to"><small>A virada</small><b>Ocupar um lugar</b><p>Posicionamento é comunicação: as pessoas entendem quem você é e por que lembrar de você.</p></div></div>
-      <div class="t"><div class="n">02</div>
-        <div class="from"><small>O erro</small><b>Crescer só por indicação</b><p>Você fica esperando alguém lembrar, sem controle sobre o próprio crescimento.</p></div>
-        <div class="to"><small>A virada</small><b>Fazer seu trabalho circular</b><p>Quando entendem o que você faz, as pessoas sabem quando procurar e quando indicar você.</p></div></div>
-      <div class="t"><div class="n">03</div>
-        <div class="from"><small>O erro</small><b>Não comunicar valor</b><p>Você se apresenta pelo currículo e a família compara a única coisa que sobra: o preço.</p></div>
-        <div class="to"><small>A virada</small><b>Conhecimento vira valor percebido</b><p>Você mostra o que consegue fazer pelo paciente e pela família.</p></div></div>
-      <div class="t"><div class="n">04</div>
-        <div class="from"><small>O erro</small><b>Achar que o problema é cobrar caro</b><p>A culpa leva a encaixar mais um, depois outro, até a exaustão.</p></div>
-        <div class="to"><small>A virada</small><b>Carreira sustentável</b><p>Agenda cheia não é sucesso. Sustentabilidade é o que permite fazer um bom trabalho por muitos anos.</p></div></div>
-      <div class="t"><div class="n">05</div>
-        <div class="from"><small>O erro</small><b>Tentar descobrir tudo sozinha</b><p>Experiência custa dinheiro, oportunidade e, quase sempre, tempo.</p></div>
-        <div class="to"><small>A virada</small><b>Aprender com quem já fez o caminho</b><p>Sua energia vai para avançar, não para descobrir onde está a estrada.</p></div></div>
+      <div class="t"><span class="n">ERRO 01</span><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><p>O erro que faz terapeutas excelentes passarem despercebidas <span>e por que ele não tem nada a ver com competência.</span></p></div>
+      <div class="t"><span class="n">ERRO 02</span><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><p>Por que sua carreira pode crescer devagar <span>mesmo com pacientes satisfeitos e um bom trabalho.</span></p></div>
+      <div class="t"><span class="n">ERRO 03</span><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><p>O que faz as pessoas não entenderem o seu valor <span>e o que mudar na forma de apresentar o seu trabalho.</span></p></div>
+      <div class="t"><span class="n">ERRO 04</span><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><p>Por que agenda cheia nem sempre é carreira bem-sucedida <span>e como sair do modo exaustão.</span></p></div>
+      <div class="t"><span class="n">ERRO 05</span><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><p>O erro que mais custa tempo na carreira <span>e o caminho para não precisar descobrir tudo sozinha.</span></p></div>
     </div>
     <div class="cta-wrap">
-      <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero assistir às 5 aulas
+      <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero descobrir
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <div class="safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>R$ 67 · 7 dias de garantia</div>
+      <div class="safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>7 dias de garantia</div>
     </div>
   </div>
 </section>
@@ -346,9 +332,9 @@
     <div class="bio-photo"><img src="img/cinthia-evento.webp" alt="Cinthia França" width="960" height="1200" loading="lazy"></div>
     <div>
       <span class="eyebrow">Quem vai te guiar</span>
-      <h2 class="h2">Cinthia <b>França</b></h2>
-      <p><b>Terapeuta ocupacional e empresária da saúde.</b> Fundou o Espaço Terapêutico Cinthia França, que começou como uma clínica e se transformou em uma rede de clínicas e escolas.</p>
-      <p>Saiu da faculdade sem entender nada de gestão nem de posicionamento. Bateu cabeça, errou, acertou, e hoje mostra para outras terapeutas o caminho que ninguém ensinou a ela.</p>
+      <h2 class="h2">Prazer, eu sou <b>Cinthia França</b></h2>
+      <p>Sou <b>terapeuta ocupacional e empresária da saúde</b>. Fundei o Espaço Terapêutico Cinthia França, que começou como uma clínica e se transformou em uma rede de clínicas e escolas.</p>
+      <p>Quando me formei, não entendia nada de gestão nem de posicionamento. Bati muita cabeça, errei, acertei. Hoje mostro para outras terapeutas o caminho que ninguém me ensinou.</p>
       <blockquote>“Ter orientação não diminui o seu mérito. Você usa sua energia para avançar.”</blockquote>
     </div>
   </div>
@@ -356,14 +342,13 @@
 
 <section class="offer" id="oferta">
   <div class="wrap">
-    <h2 class="h2">Comece hoje a <b>destravar sua carreira</b></h2>
+    <h2 class="h2">Comece hoje a construir <b>a carreira que você merece</b></h2>
     <div class="pbox">
       <div class="pl">
-        <span class="eyebrow">Os 5 Erros que Travam sua Carreira como Terapeuta</span>
         <h3>O que você recebe</h3>
         <ul>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span><b>5 aulas com a Cinthia</b> sobre os erros que travam a carreira e como sair de cada um</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span><b>Área de membros</b> para assistir no celular ou no computador</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span><b>5 aulas</b> para entender os erros que travam a sua carreira e como sair de cada um</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span><b>Assista no celular ou no computador</b>, no seu ritmo</span></li>
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span><b>Certificado</b> de conclusão</span></li>
         </ul>
       </div>
@@ -371,14 +356,14 @@
         <div class="lab">Investimento</div>
         <div class="val"><small>R$</small>67</div>
         <div class="once">pagamento único</div>
-        <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero começar agora
+        <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero começar
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <div class="pays"><span>Cartão</span><span>Pix</span><span>Boleto</span></div>
       </div>
     </div>
     <div class="guar">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
-      <div><b>Risco zero: 7 dias de garantia.</b> Assista às aulas. Se não fizer sentido para você, peça o reembolso dentro de 7 dias.</div>
+      <div class="seal"><div><b>7</b><span>DIAS</span></div></div>
+      <div><h3>Garantia de 7 dias</h3><p>Assista às aulas com tranquilidade. Se sentir que o curso não é para você, é só pedir o reembolso dentro de 7 dias e você recebe todo o valor de volta.</p></div>
     </div>
   </div>
 </section>
@@ -400,9 +385,9 @@
   <div class="wrap">
     <h2 class="h2">Se nada mudar, <b>onde você vai estar daqui a três anos?</b></h2>
     <p>Talvez com mais cursos no currículo e a agenda ainda mais cheia. Ou com uma carreira que finalmente reflete a profissional que você já se tornou.</p>
-    <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero destravar minha carreira
+    <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero começar
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <div class="safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>R$ 67 · 7 dias de garantia</div>
+    <div class="safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>7 dias de garantia</div>
   </div>
 </section>
 
@@ -414,7 +399,7 @@
   </div>
 </footer>
 
-<div class="sticky" id="sticky"><a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero destravar · R$ 67</a></div>
+<div class="sticky" id="sticky"><a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero assistir agora</a></div>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
