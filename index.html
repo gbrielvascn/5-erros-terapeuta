@@ -118,21 +118,25 @@
   .turns .safe{justify-content:center;color:#59463F}
 
   /* BIO */
-  .bio{padding:100px 0}
-  .bio .wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:64px;align-items:center}
-  .bio-photo{position:relative}
-  .bio-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;position:relative;z-index:1}
-  .bio-photo::after{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid #C9A898;border-radius:6px}
-  .bio h2{margin:12px 0 20px}
-  .bio p{color:var(--text);font-size:17px;margin-bottom:14px}
+  .bio{padding:110px 0;background:linear-gradient(180deg,var(--bg) 0%,#EFE2DA 100%)}
+  .bio .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
+  .bio-photo{position:relative;padding:0 0 56px}
+  .bio-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;box-shadow:0 30px 60px -30px rgba(60,30,20,.45)}
+  .bio-photo blockquote{position:absolute;left:28px;right:-36px;bottom:0;background:var(--dark);color:#FFF8F3;padding:22px 26px;border-radius:8px;font-size:17.5px;font-weight:500;line-height:1.4;border-left:3px solid var(--accent);box-shadow:0 20px 40px -20px rgba(0,0,0,.5)}
+  .bio h2{margin:12px 0 18px}
+  .bio .lead{font-size:20px;color:var(--ink);font-weight:600;margin-bottom:14px}
+  .bio p{color:var(--text);font-size:16.5px;margin-bottom:14px}
   .bio p b{color:var(--ink)}
-  .bio blockquote{margin-top:26px;padding:20px 24px;border-left:3px solid var(--btn);background:var(--card);font-size:19px;font-weight:600;line-height:1.4}
-
-  .creds{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
-  .creds li{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:14.5px;color:var(--text);line-height:1.4}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);margin:28px 0 8px;border-top:1px solid #D8C3B8;border-bottom:1px solid #D8C3B8}
+  .stats div{padding:18px 16px 18px 0}
+  .stats div+div{padding-left:20px;border-left:1px solid #D8C3B8}
+  .stats b{display:block;font-size:30px;font-weight:800;color:var(--deep);line-height:1.1;letter-spacing:-.02em}
+  .stats span{font-size:13px;color:var(--text);line-height:1.35;display:block;margin-top:4px}
+  .creds{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 28px;margin-top:10px}
+  .creds li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid #E2D2C8;font-size:14.5px;color:var(--text);line-height:1.4}
   .creds b{color:var(--ink)}
-  .ci{width:34px;height:34px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;color:var(--btn)}
-  .ci svg{width:17px;height:17px}
+  .ci{width:34px;height:34px;border-radius:50%;background:var(--btn);display:grid;place-items:center;color:#fff}
+  .ci svg{width:16px;height:16px}
 
   /* OFERTA */
   .offer{background:#140E0B;padding:100px 0}
@@ -154,9 +158,9 @@
   .pr .once{color:#A8988F;font-size:13px;margin-bottom:24px}
   .pr .btn{width:100%}
   .pays{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
-  .pays span{display:flex;flex-direction:column;align-items:center;gap:5px;background:#FBF6F2;border-radius:6px;padding:9px 4px 7px;font-size:11.5px;font-weight:600;color:#5C4C45}
+  .pays span{display:flex;align-items:center;justify-content:center;background:#FBF6F2;border-radius:6px;height:42px}
   .pays i{display:flex;align-items:center;gap:5px;height:20px}
-  .pays .pi{height:18px;width:auto}
+  .pays .pi{height:20px;width:auto}
   .guar{max-width:940px;margin:22px auto 0;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:#F6EEE9;border-radius:10px;padding:28px 36px}
   .seal{width:104px;height:104px;border-radius:50%;background:var(--btn);color:#FFF8F3;display:grid;place-items:center;text-align:center;box-shadow:0 0 0 6px #F6EEE9,0 0 0 7px #C9A898}
   .seal b{display:block;font-size:34px;font-weight:800;line-height:1}
@@ -215,8 +219,11 @@
     .tlist{grid-template-columns:1fr}
     .t,.t:nth-child(4){grid-column:auto;padding:24px 22px}
     .bio .wrap{grid-template-columns:1fr;gap:48px}
-    .bio-photo{max-width:360px;margin-right:16px}
+    .bio-photo{max-width:400px;padding-bottom:70px}
+    .bio-photo blockquote{left:16px;right:16px;font-size:16px}
     .creds{grid-template-columns:1fr}
+    .stats b{font-size:24px}
+    .stats div+div{padding-left:12px}
     .pbox{grid-template-columns:1fr}
     .pl{padding:30px 22px}
     .pr{padding:34px 22px}
@@ -338,20 +345,27 @@
 
 <section class="bio">
   <div class="wrap">
-    <div class="bio-photo"><img src="img/cinthia-evento.webp" alt="Cinthia França" width="960" height="1200" loading="lazy"></div>
-    <div>
+    <div class="bio-photo">
+      <img src="img/cinthia-evento.webp" alt="Cinthia França" width="960" height="1200" loading="lazy">
+      <blockquote>“Ter orientação não diminui o seu mérito. Você usa sua energia para avançar.”</blockquote>
+    </div>
+    <div class="bio-copy">
       <span class="eyebrow">Quem vai te guiar</span>
       <h2 class="h2">Prazer, eu sou <b>Cinthia França</b></h2>
-      <p>Sou <b>terapeuta ocupacional há mais de 20 anos</b>, empresária da saúde, mãe da Lavínia e do Luan.</p>
+      <p class="lead">Terapeuta ocupacional, empresária da saúde, mãe da Lavínia e do Luan.</p>
       <p>Comecei na APAE de Mogi das Cruzes, conciliando com atendimentos domiciliares e em consultório. Em fevereiro de 2020 abri o Espaço Terapêutico Cinthia França com cerca de 45 pacientes e recursos emprestados. Um mês depois, veio a pandemia.</p>
-      <p>Hoje lidero <b>uma rede de clínicas multidisciplinares e escolas</b> em São Paulo e Pernambuco. E aprendi na prática tudo o que a faculdade não ensina sobre fazer uma carreira crescer.</p>
+      <p>Hoje lidero <b>uma rede de clínicas multidisciplinares e escolas</b> em São Paulo e Pernambuco, e aprendi na prática tudo o que a faculdade não ensina sobre fazer uma carreira crescer.</p>
+      <div class="stats">
+        <div><b>20+</b><span>anos de terapia ocupacional</span></div>
+        <div><b>2020</b><span>ano em que abri minha primeira clínica</span></div>
+        <div><b>SP · PE</b><span>clínicas e escolas</span></div>
+      </div>
       <ul class="creds">
         <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 22l5-3 5 3-1.5-7.5"/></svg></span><span>Certificação internacional em <b>Integração Sensorial pela USC</b> (Califórnia, EUA)</span></li>
         <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><span>Pós-graduada em <b>Neurologia Funcional, Neurologia Dinâmica, TEA e ABA</b></span></li>
         <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14z"/><path d="M6.5 17A2.5 2.5 0 0 0 4 19.5 2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span><span>Coautora do livro <b>Autismo: Práticas e Intervenções</b></span></li>
         <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/></svg></span><span>Palestrante em <b>congressos nacionais e internacionais</b></span></li>
       </ul>
-      <blockquote>“Ter orientação não diminui o seu mérito. Você usa sua energia para avançar.”</blockquote>
     </div>
   </div>
 </section>
@@ -374,7 +388,7 @@
         <div class="once">pagamento único</div>
         <a class="btn js-cta" href="https://pay.kirvano.com/73191838-db71-4db0-a20a-98476601e4a1">Quero começar
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <div class="pays"><span><i><svg class="pi" viewBox="0 0 24 24" aria-label="Visa"><path fill="#1A1F71" d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/></svg><svg class="pi" viewBox="0 0 32 20" aria-label="Mastercard"><circle cx="11" cy="10" r="8" fill="#EB001B"/><circle cx="21" cy="10" r="8" fill="#F79E1B"/><path d="M16 3.8a8 8 0 0 1 0 12.4 8 8 0 0 1 0-12.4z" fill="#FF5F00"/></svg></i>Cartão</span><span><i><svg class="pi" viewBox="0 0 24 24" aria-label="Pix"><path fill="#32BCAD" d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"/></svg></i>Pix</span><span><i><svg class="pi" viewBox="0 0 24 24" aria-label="Boleto"><rect x="2" y="4" width="1.6" height="16" fill="#291E1A"/><rect x="4.6" y="4" width="0.8" height="16" fill="#291E1A"/><rect x="6.4" y="4" width="1.6" height="16" fill="#291E1A"/><rect x="9" y="4" width="0.8" height="16" fill="#291E1A"/><rect x="10.8" y="4" width="2" height="16" fill="#291E1A"/><rect x="13.8" y="4" width="0.8" height="16" fill="#291E1A"/><rect x="15.6" y="4" width="1.6" height="16" fill="#291E1A"/><rect x="18.2" y="4" width="0.8" height="16" fill="#291E1A"/><rect x="20" y="4" width="2" height="16" fill="#291E1A"/></svg></i>Boleto</span></div>
+        <div class="pays"><span><i><svg class="pi" viewBox="0 0 24 24" aria-label="Visa"><path fill="#1A1F71" d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/></svg><svg class="pi" viewBox="0 0 32 20" aria-label="Mastercard"><circle cx="11" cy="10" r="8" fill="#EB001B"/><circle cx="21" cy="10" r="8" fill="#F79E1B"/><path d="M16 3.8a8 8 0 0 1 0 12.4 8 8 0 0 1 0-12.4z" fill="#FF5F00"/></svg></i></span><span><i><svg class="pi" viewBox="0 0 24 24" aria-label="Pix"><path fill="#32BCAD" d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"/></svg></i></span><span><i><svg class="pi" viewBox="0 0 24 24" aria-label="Boleto"><rect x="2" y="4" width="1.6" height="16" fill="#291E1A"/><rect x="4.6" y="4" width="0.8" height="16" fill="#291E1A"/><rect x="6.4" y="4" width="1.6" height="16" fill="#291E1A"/><rect x="9" y="4" width="0.8" height="16" fill="#291E1A"/><rect x="10.8" y="4" width="2" height="16" fill="#291E1A"/><rect x="13.8" y="4" width="0.8" height="16" fill="#291E1A"/><rect x="15.6" y="4" width="1.6" height="16" fill="#291E1A"/><rect x="18.2" y="4" width="0.8" height="16" fill="#291E1A"/><rect x="20" y="4" width="2" height="16" fill="#291E1A"/></svg></i></span></div>
       </div>
     </div>
     <div class="guar">
